@@ -1,0 +1,64 @@
+.homecard {
+  background-image: url("../images/signup_banner.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bgs {
+  background-color: rgba(52, 99, 96, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.errors {
+  color: red;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+}
+
+.form-label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.btn:hover {
+  background-color: #fcfcfc;
+}

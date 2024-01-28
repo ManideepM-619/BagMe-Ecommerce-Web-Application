@@ -1,0 +1,42 @@
+/* Products.css */
+
+/* Container for each product */
+div {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Image style */
+.imgs {
+  width: 100%;
+  height: auto;
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+}
+
+/* Product name style */
+p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Prices container style */
+.product-prices {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+/* New price style */
+.product-price-new {
+  color: #009688; /* Set the color for the new price */
+  font-size: 18px;
+}
+
+/* Old price style */
+.product-old-price {
+  color: #757575; /* Set the color for the old price */
+  font-size: 14px;
+  text-decoration: line-through; /* Add a line-through for the old price */
+}

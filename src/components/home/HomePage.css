@@ -1,0 +1,142 @@
+/* HomePage.css */
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Arial', sans-serif;
+   background-color: #f5f5f5;
+ }
+ 
+ /* Banner.css */
+ 
+ .banner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 40px;
+ }
+ 
+ .banner-left {
+   flex: 1;
+   max-width: 500px;
+ }
+ 
+ .banner-left h2 {
+   font-size: 28px;
+   margin-bottom: 16px;
+   color: #333;
+ }
+ 
+ .hand-icon {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .hand-icon p {
+   margin-right: 8px;
+   font-size: 14px;
+   color: #333;
+ }
+ 
+ .hand-icon img {
+   width: 24px;
+   height: 24px;
+ }
+ 
+ .banner-latest-btn {
+   display: flex;
+   align-items: center;
+   margin-top: 16px;
+   cursor: pointer;
+ }
+ 
+ .banner-latest-btn div {
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 4px;
+   font-size: 16px;
+ }
+ 
+ .banner-latest-btn img {
+   margin-left: 8px;
+   width: 16px;
+   height: 16px;
+ }
+ 
+ .banner-right img {
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+ }
+ 
+ /* Popular.css */
+ 
+ .popular {
+   padding: 40px;
+   text-align: center;
+ }
+ 
+ .popular h1 {
+   font-size: 28px;
+   color: #333;
+ }
+ 
+ .popular-product {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-top: 20px;
+ }
+ 
+ /* NewCollections.css */
+ 
+ .shop-category {
+   padding: 40px;
+   text-align: center;
+ }
+ 
+ .shop-category h1 {
+   font-size: 28px;
+   color: #333;
+ }
+ 
+ .shopcategory-products {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-top: 20px;
+ }
+ 
+ /* Products.css (Assuming it's a separate component) */
+ 
+ .product {
+   width: 200px;
+   margin-bottom: 20px;
+   text-align: center;
+ }
+ 
+ .product img {
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+ }
+ 
+ .product-name {
+   font-size: 16px;
+   color: #333;
+   margin-top: 10px;
+ }
+ 
+ .product-price {
+   font-size: 16px;
+   color: #007bff;
+   margin-top: 8px;
+ }
+ 
+ .product-old-price {
+   font-size: 14px;
+   color: #888;
+   text-decoration: line-through;
+   margin-top: 8px;
+ }
+ 

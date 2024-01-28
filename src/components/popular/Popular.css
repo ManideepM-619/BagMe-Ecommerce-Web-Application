@@ -1,0 +1,49 @@
+
+  .popular h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .popular-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  
+  .product-container img {
+    width: 100%; 
+    height: auto; 
+    max-width: 300px; 
+    max-height: 300px; 
+  }
+  .product-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .product-container p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .product-prices {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  
+  .product-price-new {
+    color: #009688;
+    font-size: 18px;
+  }
+  
+  .product-old-price {
+    color: #757575;
+    font-size: 14px;
+    text-decoration: line-through;
+  }
+  

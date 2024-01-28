@@ -1,0 +1,91 @@
+/* ProductDisplay.css */
+
+.productdisplay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .productdisplay-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .productdisplay-img-list {
+    /* Add any styling for the image list if needed */
+  }
+  
+  .productdisplay-img {
+    margin-top: 20px;
+  }
+  
+  .productdisplay-main-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .productdisplay-rigt {
+    margin-left: 20px;
+  }
+  
+  .productdisplay h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .productdisplay-right-star {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .productdisplay-right-star img {
+    max-width: 20px;
+    height: auto;
+    margin-right: 5px;
+  }
+  
+  .productdisplay-right-prices {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+
+  
+  .productdisplay-right-size {
+    margin-bottom: 10px;
+  }
+  
+  .productdisplay-right-size div {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .productdisplay-right-size div:hover {
+    background-color: #f0f0f0;
+  }
+  .delh{
+    margin-right: 560px;
+  }
+  .delhs{
+    margin-top: 15px;
+  }
+  .productdisplay button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .productdisplay button:hover {
+    background-color: #0056b3;
+  }
+  

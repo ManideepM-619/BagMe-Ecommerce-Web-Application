@@ -1,0 +1,31 @@
+.shop-category {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+
+  .shopcategory-products {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .expand-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .expand-button:hover {
+    background-color: #0056b3;
+  }
+  
