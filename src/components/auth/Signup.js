@@ -5,47 +5,47 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { hashSync } from "bcryptjs";
 import './Signup.css'
- 
-const Signup = () => {let { register, handleSubmit } = useForm();
-let navigate = useNavigate();
 
-let [error, setError] = useState("");
+const Signup = () => {
+  let { register, handleSubmit } = useForm();
+  let navigate = useNavigate();
 
-async function onUserRegister(userObj) {
-  try {
-    console.log(userObj);
-    // Search for duplicate user
-    let res1 = await axios.get(
-      `http://localhost:4000/users?username=${userObj.username}`
-    );
-    let usersList = res1.data;
+  let [error, setError] = useState("");
 
-    if (usersList.length === 0) {
-      if (userObj.username.length < 5) {
-        setError("Username must contain at least 5 characters.");
-      } else if (userObj.password.length < 8) {
-        setError("Password must contain at least 8 characters.");
-      } else {
-        let hashedPassword = hashSync(userObj.password, 5);
-        userObj.password = hashedPassword;
-        let res = await axios.post("http://localhost:4000/users", userObj);
-        if (res.status === 201) {
-          navigate("/login");
+  async function onUserRegister(userObj) {
+    try {
+      // Search for duplicate user
+      let res1 = await axios.get(
+        `http://localhost:4000/users?username=${userObj.username}`
+      );
+      let usersList = res1.data;
+
+      if (usersList.length === 0) {
+        if (userObj.username.length < 5) {
+          setError("Username must contain at least 5 characters.");
+        } else if (userObj.password.length < 8) {
+          setError("Password must contain at least 8 characters.");
+        } else {
+          let hashedPassword = hashSync(userObj.password, 5);
+          userObj.password = hashedPassword;
+          let res = await axios.post("http://localhost:4000/users", userObj);
+          if (res.status === 201) {
+            navigate("/login");
+          }
         }
+      } else {
+        setError("User already exists!");
       }
-    } else {
-      setError("User already exists!");
+    } catch (err) {
+      setError(err.message);
     }
-  } catch (err) {
-    setError(err.message);
-  }
   };
- 
+
   return (
     <div className='homecard'>
-    <div className="bgs">
-        
-      
+      <div className="bgs">
+
+
         <form className="forms" onSubmit={handleSubmit(onUserRegister)}>
           {error.length !== 0 && <p className="errors">{error}</p>}
           <h1>Sign Up</h1>
@@ -60,7 +60,7 @@ async function onUserRegister(userObj) {
               required
             />
           </div>
-   
+
           <div>
             <label htmlFor="password" className="form-label">
               Password
@@ -72,7 +72,7 @@ async function onUserRegister(userObj) {
               required
             />
           </div>
-   
+
           <div>
             <label htmlFor="email" className="form-label">
               Email
@@ -85,7 +85,7 @@ async function onUserRegister(userObj) {
               required
             />
           </div>
-   
+
           <div>
             <label htmlFor="dob" className="form-label">
               Date of birth
@@ -98,15 +98,15 @@ async function onUserRegister(userObj) {
               required
             />
           </div>
-   
-          <button className="btns">Sign Up</button>
-         
-        </form>
-     
 
-    </div>
+          <button className="btns">Sign Up</button>
+
+        </form>
+
+
       </div>
+    </div>
   )
 };
- 
+
 export default Signup;

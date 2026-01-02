@@ -15,13 +15,13 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to={"/"}>
-      <div className="nav-logo">
-        <img
-          src={blackoption}
-          alt=""
-          style={{ width: "15%", height: "auto" }}
-        />
-      </div>
+        <div className="nav-logo">
+          <img
+            src={blackoption}
+            alt=""
+            style={{ width: "15%", height: "auto" }}
+          />
+        </div>
       </Link>
       <ul className="nav-menu">
         <li>
@@ -51,7 +51,6 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="nav-login-cart ml-5">
-        {console.log(isLoggedIn)}
         {isLoggedIn ? (
           <Link to="/" style={{ textDecoration: "none" }}>
             <button onClick={handleLogout}>Logout</button>

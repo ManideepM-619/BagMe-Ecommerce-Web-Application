@@ -25,7 +25,6 @@ function Login() {
         let result = compareSync(userCredObj.password, usersList[0].password);
         if (result) {
           setIsLoggedIn(true);
-          console.log(isLoggedIn);
           navigate("/cart");
         } else {
           setError("Invalid Password");
@@ -38,53 +37,53 @@ function Login() {
   }
   return (
     <div className="homebanner">
-    <div className="log">
-      <div>
-        <div className="bgss">
-          <div className="login-container">
-            <h1 className="display-3 text-center text"><b>User Login</b></h1>
+      <div className="log">
+        <div>
+          <div className="bgss">
+            <div className="login-container">
+              <h1 className="display-3 text-center text"><b>User Login</b></h1>
 
-            {error.length !== 0 && (
-              <p className="fs-2 text-center text-danger">{error}</p>
-            )}
-            <form className="forms" onSubmit={handleSubmit(onUserLogin)}>
-              <div>
-                <label htmlFor="username" className="form-label">
-                  Username
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter Username"
-                  {...register("username")}
-                  className="form-control mb-4"
-                />
-              </div>
+              {error.length !== 0 && (
+                <p className="fs-2 text-center text-danger">{error}</p>
+              )}
+              <form className="forms" onSubmit={handleSubmit(onUserLogin)}>
+                <div>
+                  <label htmlFor="username" className="form-label">
+                    Username
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter Username"
+                    {...register("username")}
+                    className="form-control mb-4"
+                  />
+                </div>
 
-              {/* password */}
-              <div>
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  placeholder="Enter Password"
-                  {...register("password")}
-                  className="form-control mb-4"
-                />
-              </div>
+                {/* password */}
+                <div>
+                  <label htmlFor="password" className="form-label">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Enter Password"
+                    {...register("password")}
+                    className="form-control mb-4"
+                  />
+                </div>
 
-              <button className="btns">Login</button>
-              <p>
-                New here?
-                <Link to="/signup" className="">
-                  Signup
-                </Link>
-              </p>
-            </form>
+                <button className="btns">Login</button>
+                <p>
+                  New here?
+                  <Link to="/signup" className="">
+                    Signup
+                  </Link>
+                </p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

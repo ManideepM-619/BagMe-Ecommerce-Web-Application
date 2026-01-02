@@ -8,7 +8,6 @@ const getDefaultCart = () => {
   for (let index = 0; index < all_product.length + 1; index++) {
     cart[index] = 0;
   }
-  console.log(cart);
   return cart;
 };
 
