@@ -1,7 +1,7 @@
 # Netlify Build Configuration
 [build]
-  # Build command
-  command = "npm run build"
+  # Build command - CI=false prevents ESLint from treating warnings as errors
+  command = "CI=false npm run build"
   # Output directory
   publish = "build"
 

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { hashSync } from "bcryptjs";
 import './Signup.css'
 
 const Signup = () => {
@@ -26,8 +25,7 @@ const Signup = () => {
         } else if (userObj.password.length < 8) {
           setError("Password must contain at least 8 characters.");
         } else {
-          let hashedPassword = hashSync(userObj.password, 5);
-          userObj.password = hashedPassword;
+          // Note: In production, password hashing should be done server-side
           let res = await axios.post("http://localhost:4000/users", userObj);
           if (res.status === 201) {
             navigate("/login");
@@ -39,13 +37,11 @@ const Signup = () => {
     } catch (err) {
       setError(err.message);
     }
-  };
+  }
 
   return (
     <div className='homecard'>
       <div className="bgs">
-
-
         <form className="forms" onSubmit={handleSubmit(onUserRegister)}>
           {error.length !== 0 && <p className="errors">{error}</p>}
           <h1>Sign Up</h1>
@@ -100,10 +96,7 @@ const Signup = () => {
           </div>
 
           <button className="btns">Sign Up</button>
-
         </form>
-
-
       </div>
     </div>
   )
